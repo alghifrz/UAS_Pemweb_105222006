@@ -10,10 +10,9 @@ use App\Jawaban\NomorEmpat;
 class SchedulerController extends Controller {
 
     public function home () {
-
         $nomorTiga = new NomorTiga(); 
         $events = $nomorTiga->getData();
-
+        
         return view('home.index', compact('events'));
     }
 

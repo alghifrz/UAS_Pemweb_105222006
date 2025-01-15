@@ -15,15 +15,20 @@ use App\Http\Controllers\SchedulerController;
 | be assigned to the "web" middleware group. Make something great!
 |
 */
+Route::get('/', function () {
+    return view('welcome');
+});
+
 
 Route::post('auth', [AuthController::class, 'auth'])->name('auth');
 Route::get('logout', [AuthController::class, 'logout'])->name('logout');
 
 Route::prefix('event')->name('event.')->group(function(){
     Route::get('/', [SchedulerController::class, 'home'])->name('home');
+    Route::get('getData', [SchedulerController::class, 'getData'])->name('getData');
     Route::post('submit', [SchedulerController::class, 'submit'])->name('submit');
-    Route::post('update', [SchedulerController::class, 'update'])->name('update');
+    Route::put('update', [SchedulerController::class, 'update'])->name('update');
     Route::post('delete', [SchedulerController::class, 'delete'])->name('delete');
-    Route::get('get-json', [SchedulerController::class, 'getJson'])->name('get-json');
-    Route::get('get-selected-data', [SchedulerController::class, 'getSelectedData'])->name('get-selected-data');
+    Route::get('get-json', [SchedulerController::class, 'getJson'])->name('getJson');
+    Route::get('get-selected-data', [SchedulerController::class, 'getSelectedData'])->name('getSelectedData');
 });

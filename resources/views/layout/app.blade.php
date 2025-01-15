@@ -15,9 +15,19 @@
         <link rel="stylesheet" href="{{ asset('argon/vendor/sweetalert2/dist/sweetalert2.min.css') }}">
         <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.css" />
         <script src="{{ asset('fullcalendar/dist/index.global.min.js') }}"></script>
+        <link rel="icon" href="{{ asset('img/web.png') }}" type="image/x-icon">
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&display=swap" rel="stylesheet">
+        {{-- @vite('resources/css/app.css') --}}
+        <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+        
+        <title>UAS PEMWEB 2025</title>
+
     </head>
 
     <style type="text/css">
+        body {
+            font-family: 'Montserrat', sans-serif;
+        }
         table td {
             word-break: break-word;
             vertical-align: top;
@@ -43,6 +53,10 @@
             width: 20px;
             z-index: 1;
         }
+        .fc-event-time {
+            display: none !important;
+        }
+
     </style>
 
     <body>
@@ -119,27 +133,30 @@
             </div>
         </div>
 
-        <!-- Argon Scripts -->
-        <!-- Core -->
         <script type="text/javascript" src="https://cdn.jsdelivr.net/jquery/latest/jquery.min.js"></script>
-        <script src="{{ asset('argon/vendor/jquery/dist/jquery.min.js') }}"></script>
+        <script src="https://cdn.jsdelivr.net/npm/moment@2.29.1/moment.min.js"></script>
+
         <script src="{{ asset('argon/vendor/bootstrap/dist/js/bootstrap.bundle.min.js') }}"></script>
+
         <script src="{{ asset('argon/vendor/js-cookie/js.cookie.js') }}"></script>
         <script src="{{ asset('argon/vendor/jquery.scrollbar/jquery.scrollbar.min.js') }}"></script>
         <script src="{{ asset('argon/vendor/jquery-scroll-lock/dist/jquery-scrollLock.min.js') }}"></script>
+
         <!-- Optional JS -->
         <script src="https://cdn.jsdelivr.net/npm/chart.js@4.3.2/dist/chart.umd.min.js"></script>
-        <script type="text/javascript" src="https://cdn.jsdelivr.net/jquery/latest/jquery.min.js"></script>
-        <script type="text/javascript" src="https://cdn.jsdelivr.net/momentjs/latest/moment.min.js"></script>
+        <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/momentjs/latest/moment.min.js"></script>
         <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.min.js"></script>
+
         <!-- Argon JS -->
         <script src="{{ asset('argon/js/argon.js?v=1.2.0') }}"></script>
         <script src="{{ asset('argon/vendor/select2/dist/js/select2.min.js') }}"></script>
         <script src="{{ asset('argon/vendor/sweetalert2/dist/sweetalert2.min.js') }}"></script>
-        <script src="{{ asset('argon/vendor/datatables.net/js/jquery.dataTables.min.js') }}"> </script>
-        <script src="{{ asset('argon/vendor/datatables.net-bs4/js/dataTables.bootstrap4.min.js') }}"> </script>
+        <script src="{{ asset('argon/vendor/datatables.net/js/jquery.dataTables.min.js') }}"></script>
+        <script src="{{ asset('argon/vendor/datatables.net-bs4/js/dataTables.bootstrap4.min.js') }}"></script>
+
 
         @yield('addon-script')
+
         
     </body>
 
