@@ -1,3 +1,6 @@
+<h3>Nama: Alghifari Rasyid Zola</h3>
+<h3>NIM: 105222006</h3>
+
 <h1> Panduan UAS Pemweb 2024/2025 </h1> 
 <h3> Contoh consume API dengan Jquery : </h3>
 <code>
